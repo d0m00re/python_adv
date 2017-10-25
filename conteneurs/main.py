@@ -31,7 +31,15 @@ class MySize:
 if 'salut' in MyContainer():
 	print ("Good class : 'salut' in MyContainer()")
 
-#les conteneurs possede une taille
+#les conteneurs possedes une taille
 # len call methode __len__
 print ("Container test len([1, 2, 3]) : " + str(len([1, 2, 3])))
 print ("Container test class str(len(MySize()))  : " + str(len(MySize())))
+
+# objects indexable
+number = [4, 7, 6, 18 , 15]
+del number[0]
+number.__getitem__(2)
+number.__setitem__(1, 1000)
+number.__delitem__(2)
+print ("number : " + str(number))
